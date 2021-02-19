@@ -1,4 +1,8 @@
 /* GENERALI E STRUTTURA BASE */
+body, html{
+  font-family: 'Montserrat', sans-serif;
+}
+
 *{
   margin: 0;
   padding: 0;
@@ -7,8 +11,7 @@
 
 header{
   height: 75px;
-  /* height: 150px; */
-  background-color: red;
+  background-color: #080b12;
   position: fixed;
   z-index: -1;
   width: 100vw;
@@ -16,19 +19,18 @@ header{
 
 }
 
-
 .sidebar{
   width: 45px;
-  /* width: 230px; */
-  background-color: grey;
+  background-color: #000;
   height: 100vh;
   overflow: overlay;
   position: fixed;
+  top: 0;
 }
 
 main{
   height: calc(100vh - 75px - 75px);
-  background-color: yellow;
+  background-color: #141922;
   overflow-y: auto;
   width: calc(100vw - 45px);
   margin-left: 45px;
@@ -37,9 +39,8 @@ main{
 
 footer{
   height: 75px;
-  /* height: 130px; */
   width: 100vw;
-  background-color: blue;
+  background-color: #282828;
   position: fixed;
   bottom: 0;
   z-index: 1;
@@ -49,15 +50,58 @@ header {
   text-align: right;
 }
 
+header .upgrade{
+  padding-top: 22px;
+  padding-right: 8px;
+}
+
 .button{
   text-transform: uppercase;
-  padding: 4px 10px;
+  padding: 8px 31px;
   border-radius: 15px;
   border: 1px solid #fff;
   display: inline;
+  text-decoration: none;
+  color: #fff;
+  font-size: 0.5em;
+  font-weight: 600;
+}
+
+/* SIDEBAR */
+header .sidebar{
+  text-align: left;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+header #logo img{
+  width: 156px;
+}
+
+header .sidebar ul{
+  list-style: none;
+}
+
+header .sidebar ul li a{
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
 }
 
 /* MAIN */
+.nav-contents ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.nav-contents ul li a{
+  text-decoration: none;
+  font-size: 0.7em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 700;
+}
+
 main .previews{
   display: flex;
   flex-wrap: wrap;
