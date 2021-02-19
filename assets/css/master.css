@@ -6,17 +6,20 @@
 }
 
 header{
-  height: 150px;
+  height: 75px;
+  /* height: 150px; */
   background-color: red;
   position: fixed;
   z-index: -1;
   width: 100vw;
   top: 0;
+
 }
 
 
 .sidebar{
-  width: 230px;
+  width: 45px;
+  /* width: 230px; */
   background-color: grey;
   height: 100vh;
   overflow: overlay;
@@ -24,21 +27,34 @@ header{
 }
 
 main{
-  height: calc(100vh - 150px - 130px);
+  height: calc(100vh - 75px - 75px);
   background-color: yellow;
   overflow-y: auto;
-  width: calc(100vw - 230px);
-  margin-left: 230px;
-  margin-top: 150px;
+  width: calc(100vw - 45px);
+  margin-left: 45px;
+  margin-top: 75px;
 }
 
 footer{
-  height: 130px;
+  height: 75px;
+  /* height: 130px; */
   width: 100vw;
   background-color: blue;
   position: fixed;
   bottom: 0;
   z-index: 1;
+}
+/* HEADER */
+header {
+  text-align: right;
+}
+
+.button{
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 15px;
+  border: 1px solid #fff;
+  display: inline;
 }
 
 /* MAIN */
@@ -46,12 +62,13 @@ main .previews{
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
+  padding: 8px;
 }
 
 main .preview-titles{
   flex-shrink: 1;
   flex-basis: calc(100%/2);
-  padding: 8px;
+  padding: 6px;
 }
 
 main .preview img{
@@ -60,11 +77,29 @@ main .preview img{
 
 /* MEDIA QUERY SM */
 @media all and (min-width: 576px){
+  header{
+    height: 85px;
+  }
 
+  .sidebar{
+    width: 250px;
+  }
+
+  main{
+    height: calc(100vh - 85px - 85px);
+    width: calc(100vw - 250px);
+    margin-left: 250px;
+    margin-top: 85px;
+  }
+
+  footer{
+    height: 85px;
+  }
 }
 
 /* MEDIA QUERY MD */
 @media all and (min-width: 768px){
+  /* CONTENUTI */
   main .preview-titles{
     flex-basis: calc(100%/4);
   }
@@ -72,6 +107,22 @@ main .preview img{
 
 /* MEDIA QUERY LG */
 @media all and (min-width: 992px){
+  .sidebar{
+    width: 230px;
+  }
+
+  main{
+    height: calc(100vh - 85px - 78px);
+    width: calc(100vw - 230px);
+    margin-left: 230px;
+    margin-top: 85px;
+  }
+
+  footer{
+    height: 78px;
+  }
+
+  /* MAIN */
   main .preview-titles{
     flex-basis: calc(100%/6);
   }
