@@ -1,3 +1,4 @@
+/* GENERALI E STRUTTURA BASE */
 *{
   margin: 0;
   padding: 0;
@@ -11,6 +12,15 @@ header{
   z-index: -1;
   width: 100vw;
   top: 0;
+}
+
+
+.sidebar{
+  width: 230px;
+  background-color: grey;
+  height: 100vh;
+  overflow: overlay;
+  position: fixed;
 }
 
 main{
@@ -31,11 +41,42 @@ footer{
   z-index: 1;
 }
 
-.sidebar{
-  width: 230px;
-  background-color: grey;
-  height: 100vh;
-  overflow: overlay;
-  position: fixed;
+/* MAIN */
+main .previews{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
 
+main .preview-titles{
+  flex-shrink: 1;
+  flex-basis: calc(100%/2);
+  padding: 8px;
+}
+
+main .preview img{
+  max-width: 100%;
+}
+
+/* MEDIA QUERY SM */
+@media all and (min-width: 576px){
+
+}
+
+/* MEDIA QUERY MD */
+@media all and (min-width: 768px){
+  main .preview-titles{
+    flex-basis: calc(100%/4);
+  }
+}
+
+/* MEDIA QUERY LG */
+@media all and (min-width: 992px){
+  main .preview-titles{
+    flex-basis: calc(100%/6);
+  }
+
+  main .previews{
+    flex-wrap: nowrap;
+  }
 }
