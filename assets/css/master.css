@@ -1,0 +1,21 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header{
+  height: 150px;
+  background-color: red;
+}
+
+main{
+  height: calc(100vh - 150px - 130px);
+  background-color: yellow;
+  overflow-y: auto;
+}
+
+footer{
+  height: 130px;
+  background-color: blue;
+}
