@@ -87,6 +87,10 @@ header .sidebar ul li a{
 }
 
 /* MAIN */
+main{
+  color: #fff;
+}
+
 .nav-contents ul{
   list-style: none;
   display: flex;
