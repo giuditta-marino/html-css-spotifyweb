@@ -11,30 +11,29 @@ body, html{
 
 header{
   height: 75px;
-  background-color: #080b12;
+  background-color: rgba(8, 11, 18, 0.6);
   position: fixed;
-  z-index: -1;
+  z-index: 1;
   width: 100vw;
   top: 0;
-
 }
 
 .sidebar{
   width: 45px;
   background-color: #000;
-  height: 100vh;
-  overflow: overlay;
+  height: calc(100vh - 75px);
+  overflow-y: auto;
   position: fixed;
   top: 0;
 }
 
 main{
-  height: calc(100vh - 75px - 75px);
+  height: calc(100vh - 75px);
   background-color: #141922;
   overflow-y: auto;
   width: calc(100vw - 45px);
   margin-left: 45px;
-  margin-top: 75px;
+  padding-top: 75px;
 }
 
 footer{
@@ -52,7 +51,7 @@ header {
 
 header .upgrade{
   padding-top: 22px;
-  padding-right: 8px;
+  padding-right: 20px;
 }
 
 .button{
@@ -71,10 +70,16 @@ header .upgrade{
 header .sidebar{
   text-align: left;
   color: rgba(255, 255, 255, 0.6);
+  padding-left: 18px;
+}
+
+.sidebar h2{
+  color: #fff;
+  text-transform: uppercase;
 }
 
 header #logo img{
-  width: 156px;
+  width: 135px;
 }
 
 header .sidebar ul{
@@ -86,6 +91,39 @@ header .sidebar ul li a{
   text-decoration: none;
 }
 
+.sidebar .nav-sidebar li a{
+  display: flex;
+  align-items: center;
+  padding-top: 7px;
+}
+
+.playlist{
+  padding-top: 18px;
+}
+
+.playlist >ul>li{
+padding-top: 12px;
+}
+
+#crea-playlist{
+  padding-top: 7px;
+}
+
+#crea-playlist span{
+  padding-left: 8px;
+}
+
+#plus{
+  display: inline-block;
+  padding: 7px 8px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#plus i{
+  font-size: 1.5em;
+  color: #000;
+}
+
 /* MAIN */
 main{
   color: #fff;
@@ -94,7 +132,7 @@ main{
 .nav-contents ul{
   list-style: none;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   flex-wrap: wrap;
 }
 
@@ -104,6 +142,7 @@ main{
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 700;
+  padding: 0 7px;
 }
 
 main .previews{
@@ -131,13 +170,14 @@ main .preview img{
 
   .sidebar{
     width: 250px;
+    height: calc(100vh - 85px);
   }
 
   main{
-    height: calc(100vh - 85px - 85px);
+    height: calc(100vh - 85px);
     width: calc(100vw - 250px);
     margin-left: 250px;
-    margin-top: 85px;
+    padding-top: 85px;
   }
 
   footer{
@@ -147,7 +187,7 @@ main .preview img{
 
 /* MEDIA QUERY MD */
 @media all and (min-width: 768px){
-  /* CONTENUTI */
+  CONTENUTI
   main .preview-titles{
     flex-basis: calc(100%/4);
   }
@@ -157,13 +197,14 @@ main .preview img{
 @media all and (min-width: 992px){
   .sidebar{
     width: 230px;
+    height: calc(100vh - 78px);
   }
 
   main{
-    height: calc(100vh - 85px - 78px);
+    height: calc(100vh - 78px);
     width: calc(100vw - 230px);
     margin-left: 230px;
-    margin-top: 85px;
+    padding-top: 85px;
   }
 
   footer{
@@ -171,7 +212,7 @@ main .preview img{
   }
 
   /* MAIN */
-  main .preview-titles{
+    main .preview-titles{
     flex-basis: calc(100%/6);
   }
 
