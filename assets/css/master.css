@@ -51,7 +51,7 @@ header {
 
 header .upgrade{
   padding-top: 22px;
-  padding-right: 20px;
+  padding-right: 50px;
 }
 
 .button{
@@ -59,18 +59,21 @@ header .upgrade{
   padding: 8px 31px;
   border-radius: 15px;
   border: 1px solid #fff;
-  display: inline;
+  display: inline-block;
   text-decoration: none;
   color: #fff;
   font-size: 0.5em;
   font-weight: 600;
 }
 
+header .upgrade .button:hover{
+  transform: scale(1.15);
+}
+
 /* SIDEBAR */
 header .sidebar{
   text-align: left;
   color: rgba(255, 255, 255, 0.6);
-  /* padding-left: 18px; */
   font-size: 0.8em;
   font-weight: 500;
 }
@@ -170,15 +173,25 @@ main{
   text-transform: uppercase;
   color: rgba(255, 255, 255, 0.6);
   font-weight: 700;
-  padding: 0 7px;
+  margin: 0 7px;
+}
+
+.nav-contents ul li a>hr{
+  width: 30px;
+  height: 2px;
+  color: #adff2f;
+  background-color: #adff2f;
+  margin: 0 auto;
+  display: none;
+  margin-top: 1px;
 }
 
 .nav-contents ul li a:hover{
   color: #fff;
 }
 
-.nav-contents li a:focus{
-  border-bottom: 2px solid #adff2f;
+.nav-contents li a:focus hr{
+  display: block;
 
 }
 
@@ -202,6 +215,32 @@ main .preview-titles{
   flex-shrink: 1;
   flex-basis: calc(100%/2);
   padding: 6px;
+}
+
+main .preview{
+  position: relative;
+}
+
+main .preview-titles .overlay{
+  position: absolute;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+main .preview-titles .overlay>i{
+  font-size: 3em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+main .preview:hover .overlay{
+  display: block;
+  cursor: pointer;
 }
 
 main .titles{
