@@ -96,8 +96,14 @@ header .sidebar{
   padding-left: 18px;
 }
 
-header #logo img{
+header #logo-esteso{
   width: 135px;
+}
+
+header #logo-immagine{
+  width: 42px;
+  padding: 0 6px;
+  padding-top: 5px;
 }
 
 header .sidebar ul{
@@ -201,6 +207,41 @@ padding-top: 12px;
 
 .sidebar .profile #installa-app span{
   padding-left: 10px;
+}
+
+/* PER COLLASSARE LA SIDEBAR IN DIMENSIONE XS */
+#logo-esteso{
+  display: none;
+}
+
+.sidebar .nav-sidebar li a span{
+  display: none;
+}
+
+.sidebar .playlist{
+  display: none;
+}
+
+.sidebar .profile span, .sidebar .profile hr{
+  display: none;
+}
+
+.sidebar .nav-sidebar{
+  padding-top: 0;
+}
+
+.sidebar .nav-sidebar li a{
+  margin-left: -8px;
+}
+
+.sidebar .profile #name-profile{
+  padding-top: 12px;
+  padding-bottom: 5px;
+  padding-left: 10px;
+}
+
+.sidebar .profile #installa-app{
+  padding: 9px 16px;
 }
 
 /* MAIN */
@@ -458,6 +499,31 @@ footer .settings a{
 
   footer{
     height: 85px;
+  }
+
+  /* PER ESPANDERE LA SIDEBAR DA DIMENSIONE SM */
+  #logo-immagine{
+    display: none;
+  }
+
+  #logo-esteso{
+    display: block;
+  }
+
+  .sidebar .nav-sidebar li a span{
+    display: inline;
+  }
+
+  .sidebar .playlist{
+    display: block;
+  }
+
+  .sidebar .profile span{
+    display: inline;
+  }
+
+  .sidebar .profile hr{
+      display: block;
   }
 }
 
