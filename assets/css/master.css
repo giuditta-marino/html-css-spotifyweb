@@ -22,9 +22,12 @@ header{
   width: 45px;
   background-color: #000;
   height: calc(100vh - 75px);
-  overflow-y: auto;
   position: fixed;
   top: 0;
+}
+
+.sidebar .playlist{
+  overflow-y: auto;
 }
 
 main{
@@ -72,10 +75,19 @@ header .upgrade .button:hover{
 
 /* SIDEBAR */
 header .sidebar{
+  display: flex;
+  flex-direction: column;
+}
+
+.sidebar .profile{
+  margin-top: auto;
+}
+
+header .sidebar{
   text-align: left;
   color: rgba(255, 255, 255, 0.6);
   font-size: 0.8em;
-  font-weight: 500;
+  font-weight: 600;
 }
 
 .sidebar h2{
@@ -149,6 +161,46 @@ padding-top: 12px;
 #plus i{
   font-size: 1.5em;
   color: #000;
+}
+
+.sidebar .profile a{
+  color: rgba(255, 255, 255, 0.6);
+  text-decoration: none;
+}
+
+.sidebar .profile hr{
+  border-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 0 18px;
+}
+
+.sidebar .profile #installa-app{
+  padding: 9px 18px;
+}
+
+.sidebar .profile #name-profile{
+  padding-top: 12px;
+  padding-bottom: 5px;
+  padding-left: 18px;
+}
+
+.sidebar .profile #name-profile a{
+  display: flex;
+  align-items: center;
+}
+
+.sidebar .profile #name-profile i{
+  font-size: 2em;
+}
+
+.sidebar .profile #name-profile span{
+  padding-left: 9px;
+  font-size: 1.1em;
+  color: #fff;
+}
+
+.sidebar .profile #installa-app span{
+  padding-left: 10px;
 }
 
 /* MAIN */
@@ -267,6 +319,47 @@ main .artisti .preview img{
   border-radius: 50%;
 }
 
+/* FOOTER */
+footer{
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .playing{
+  width: 250px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+}
+
+footer .playing i{
+  color: rgba(255, 255, 255, 0.6);
+}
+
+footer .playing .small-preview{
+  max-width: 36px;
+}
+
+footer .playing .small-preview img{
+  width: 100%;
+}
+
+footer .controls .buttons{
+  padding: 8px 0;
+}
+
+footer .controls .bar{
+  display: flex;
+}
+
+footer .settings{
+  display: flex;
+}
+
 /* MEDIA QUERY SM */
 @media all and (min-width: 576px){
   header{
@@ -319,7 +412,6 @@ main .artisti .preview img{
   /* MAIN */
     main .preview-titles{
     flex-basis: calc(100%/6);
-
   }
 
   main .previews{
