@@ -332,6 +332,7 @@ footer .playing, footer .controls, footer .settings{
   padding: 0 12px;
 }
 
+/* PRIMA COLONNA FOOTER */
 footer .playing{
   display: flex;
   align-items: center;
@@ -339,17 +340,18 @@ footer .playing{
 }
 
 footer .playing .small-preview{
-  width: 25%;
+  width: 38px;
 }
 
 footer .playing .description{
-  width: 45%;
+  padding-left: 3px;
+  width: 125px;
 }
 
 footer .playing .icons{
   display: flex;
   flex-direction: column;
-  width: 30%;
+  width: 38px;
 }
 
 footer .playing .icons i{
@@ -373,6 +375,11 @@ footer .playing .small-preview img{
   max-width: 28px;
 }
 
+/* SECONDA COLONNA FOOTER */
+footer .controls{
+  padding-top: 8px;
+}
+
 footer .controls .buttons{
   padding: 8px 0;
   display: flex;
@@ -381,13 +388,13 @@ footer .controls .buttons{
 }
 
 .controls .buttons .fa-play-circle{
-  font-size: 1.5em;
-  padding: 0 15px;
+  font-size: 1.3em;
+  padding: 0 17px;
 }
 
 .controls .buttons .fa-random, .controls .buttons .fa-step-backward, .controls .buttons .fa-step-forward, .controls .buttons .fa-redo{
-  font-size: 1em;
-  padding: 0 5px;
+  font-size: 0.9em;
+  padding: 0 7px;
 }
 
 footer .controls .bar{
@@ -400,21 +407,31 @@ footer .controls .bar p{
   font-size: 0.7em;
 }
 
+footer .controls .bar form{
+   width: 96%;
+  }
+
 footer .controls .bar input{
   height: 4px;
   margin: 0 3px;
   margin-bottom: 9px;
+  width: 100%;
 }
 
+/* TERZA COLONNA FOOTER */
 footer .settings{
   display: flex;
   justify-content: flex-end;
   align-items: center;
 }
 
+footer .settings i{
+  font-size: 0.7em;
+}
+
 footer .settings input{
   height: 4px;
-  width: 80px;
+  width: 70px;
 }
 
 footer .settings a{
@@ -449,6 +466,22 @@ footer .settings a{
   /* CONTENUTI */
   main .preview-titles{
     flex-basis: calc(100%/4);
+  }
+
+  /* FOOTER */
+  footer .playing .icons{
+    flex-direction: row;
+    width: 45px;
+    justify-content: space-between;
+  }
+
+  footer .playing, footer .settings{
+    width: 25%;
+
+  }
+
+  footer .controls{
+    width: 50%;
   }
 }
 
