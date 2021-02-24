@@ -97,6 +97,8 @@ header .sidebar{
 }
 
 header #logo-esteso{
+  padding-left: 13px;
+  padding-top: 13px;
   width: 135px;
 }
 
@@ -114,10 +116,6 @@ header .sidebar ul li a{
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   padding-left: 18px;
-}
-
-.sidebar .nav-sidebar{
-  padding-top: 10px;
 }
 
 .sidebar .nav-sidebar li a{
@@ -226,10 +224,6 @@ padding-top: 12px;
   display: none;
 }
 
-.sidebar .nav-sidebar{
-  padding-top: 0;
-}
-
 .sidebar .nav-sidebar li a{
   margin-left: -8px;
 }
@@ -285,16 +279,23 @@ main{
 
 .nav-contents li a:focus hr{
   display: block;
-
 }
 
 main .creato, main .artisti{
-  padding-top: 20px;
+  padding-top: 16px;
 }
 
-main .recently>h1, main .recently>p, main .creato>h1, main .creato>p, main .artisti>h1, main .artisti>p{
+main .recently>h1, main .creato>h1, main .artisti>h1{
   padding: 10px 0;
   padding-left: 15px;
+}
+
+main .recently>p, main .creato>p, main .artisti>p{
+  padding-bottom: 19px;
+  padding-left: 15px;
+  color: rgba(255, 255, 255, 0.6);
+  font-size: 0.9em;
+  font-weight: 600;
 }
 
 main .previews{
@@ -446,19 +447,35 @@ footer .controls .bar{
 
 footer .controls .bar p{
   font-size: 0.7em;
+  padding: 0 3px;
 }
 
 footer .controls .bar form{
-   width: 96%;
+   width: 90%;
   }
 
 footer .controls .bar input{
   height: 4px;
-  margin: 0 3px;
   margin-bottom: 9px;
   width: 100%;
 }
 
+/* CUSTOMIZZAZIONE PROGRESS BAR */
+/* input[type=range]::-webkit-slider-thumb{
+  -webkit-appearance: none;
+  border: 1px solid #000000;
+  height: 36px;
+  width: 16px;
+  border-radius: 3px;
+  background: #ffffff;
+  cursor: pointer;
+  margin-top: -14px;
+  box-shadow: 1px 1px 1px #000000, 0px 0px 1px #000000;
+} */
+
+input[type=range]::-webkit-slider-runnable-track{
+
+}
 /* TERZA COLONNA FOOTER */
 footer .settings{
   display: flex;
@@ -508,6 +525,14 @@ footer .settings a{
 
   #logo-esteso{
     display: block;
+  }
+
+  .sidebar .nav-sidebar{
+    padding-top: 10px;
+  }
+
+  .sidebar .nav-sidebar li a{
+    margin-left: 0;
   }
 
   .sidebar .nav-sidebar li a span{
